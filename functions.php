@@ -11,9 +11,15 @@ define( 'FRAMEWORK', get_template_directory() . '/framework' );
 
 /**
  * ------------------------------------------------------------------------------
- * 2.0 Load the framework
+ * 2.0 Add Theme Support
  * ------------------------------------------------------------------------------
  */
+function custom_theme_setup() {
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-formats' );
+	add_theme_support( 'html5' );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 
 /**
